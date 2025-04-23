@@ -15,7 +15,7 @@
                 throw new ArgumentException("A játéktér nem lehet üres.");
             }
 
-            // Az első nem üres sor nem szóköz karaktereinek száma adja meg az oszlopszámot
+            
             int oszlopSzam = sorok[0].Replace(" ", "").Length;
             char[][] palya = new char[sorSzam][];
             int karakterSor = -1;
