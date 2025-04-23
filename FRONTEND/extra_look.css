@@ -30,14 +30,14 @@ body {
   }
   
   .mezo-coin::before {
-    content: "🪙"; /* Unicode érme ikon */
+    content: "🪙"; /* coin ikon */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   
-  /* Pulzáló animáció */
+  /* vibrálás - coin */
   @keyframes pulse {
     0% {
       transform: scale(1);
@@ -56,15 +56,15 @@ body {
   .mezo-akadaly {
     background-color: red;
     color: white;
-    border-radius: 50%; /* Lekerekített sarkok */
-    box-shadow: 0 0 10px red, 0 0 20px darkred; /* Piros árnyék */
+    border-radius: 50%; /* kerekített sarkok*/
+    box-shadow: 0 0 10px red, 0 0 20px darkred; /* pirosas árnyék */
     font-size: 1.2rem;
     font-weight: bold;
     position: relative;
-    animation: pulse-akadaly 1.5s infinite; /* Pulzáló animáció */
+    animation: pulse-akadaly 1.5s infinite; /* vibrálás */
   }
   
-  /* Pulzáló animáció a piros akadályokhoz */
+  /* vibrálás - akadály */
   @keyframes pulse-akadaly {
     0% {
       transform: scale(1);
@@ -85,11 +85,11 @@ body {
     background-color: lightgreen;
   }
   #jatekterTabla p {
-    font-family: monospace; /* Monospace betűtípus a fix szélességű karakterekhez */
-    white-space: pre-wrap; /* A szóközök és sortörések megőrzése */
-    margin: 0; /* Alapértelmezett margók eltávolítása, ha szükséges */
+    font-family: monospace; 
+    white-space: pre-wrap; /* sortörés tartása */
+    margin: 0; /* margók nullázása */
   }
-  /* Bomb overlay styles */
+  /* akadály/bomba megjelenés */
   .bomba-overlay {
     display: none;
     position: fixed;
@@ -137,7 +137,7 @@ body {
     padding: 12px 20px;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease; /* Simább átmenet a hover effektushoz */
+    transition: all 0.3s ease; /* smooth átmenet */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
   }
   
@@ -145,13 +145,13 @@ body {
     background-color: white;
     color: black;
     border-color: black;
-    transform: translateY(-4px); /* Gomb felemelése */
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15), 0 6px 12px rgba(0, 0, 0, 0.1); /* 3D árnyék fokozása */
+    transform: translateY(-4px); /*3d gomb 1 */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15), 0 6px 12px rgba(0, 0, 0, 0.1); /* 3d gomb 2 */
   }
   
   #ujraJatszokGomb:active {
-    transform: translateY(2px); /* Gomb lejjebb kerül, amikor rákattintanak */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Árnyék visszavonása */
+    transform: translateY(2px); /* 3d gomb 3 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 3d gomb 4 */
   }
   
   

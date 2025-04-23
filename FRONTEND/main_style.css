@@ -1,103 +1,102 @@
 body {
-    background-color: #000;
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    
+    background-color: #000; 
+    color: #fff; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; /*külső margó 0 */
+    display: flex; /* flexbox */
+    flex-direction: column; /* függőleges elrendezés*/
+    min-height: 100vh; /* képernyő kitöltése */
 }
 
 nav {
-    background-color: #111;
-    padding: 1rem;
+    background-color: #111; 
+    padding: 1rem; /* belső margó a navigációs sáv körül */
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+    list-style: none; /* lista jelek eltávolítása */
+    display: flex; /* flexbox */
+    gap: 2rem; /* Térköz a lista elemek között*/
+    justify-content: center; /* Lista elemek vízszintes középre igazítása */
+    margin: 0; /* 0 margó a listán */
+    padding: 0; /* 0 margó a listán */
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    color: #fff; 
+    text-decoration: none; /* ne legyen aláhúzva */
+    font-weight: bold; 
+    transition: color 0.3s; /* színváltás animáció */
 }
 
 nav a:hover {
-    color: #ccc;
+    color: #ccc; 
 }
 
 section {
-    padding: 5rem 2rem;
-    flex-grow: 1;
-    text-align: left;
+    padding: 5rem 2rem; 
+    flex-grow: 1; 
+    text-align: left; 
 }
 .container {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0; 
+    padding-right: 0; 
 }
 
 
 button {
-    background-color: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
+    background-color: transparent; /* átlátszó háttér */
+    border: 2px solid #fff; 
+    color: #fff; 
+    padding: 0.75rem 1.5rem; 
     font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s;
+    cursor: pointer; /* mutató ikon a fölé húzáskor */
+    transition: all 0.3s; /*  0.3 másodperc alatt animál */
 }
 
 button:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #fff; 
+    color: #000; 
 }
 
 .reveal {
-    opacity: 0;
-    transform: translateX(100px);
-    transition: all 0.8s ease-in-out;
+    opacity: 0; /* Kezdetben teljesen átlátszó */
+    transform: translateX(100px); /* Kezdetben 100px-szel jobbra tolva */
+    transition: all 0.8s ease-in-out; /* Animáció minden tulajdonságra, 0.8s alatt, lassan indul és végződik */
 }
 
 .reveal.active {
-    opacity: 1;
-    transform: translateX(0);
+    opacity: 1; /* Láthatóvá válik */
+    transform: translateX(0); /* Visszatér az eredeti pozícióba */
 }
 footer {
-    background-color: #111;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+    background-color: #111; /* Sötétszürke háttérszín a láblécnek */
+    color: #fff; /* Fehér szövegszín a láblécben */
+    padding: 1rem; /* Belső margó a lábléc körül */
+    text-align: center; /* Szöveg középre igazítása a láblécben */
 }
 
 footer a {
-    color: #fff;
-    transition: color 0.3s;
+    color: #fff; /* Fehér szín a lábléc linkjeihez */
+    transition: color 0.3s; /* Színváltozás animációja 0.3 másodperc alatt */
 }
 
 footer a:hover {
-    color: #ccc;
+    color: #ccc; /* Világosszürke szín a lábléc linkjei fölé húzásakor */
 }
 
 nav .social-icons a:hover {
-    color: #ccc;
+    color: #ccc; /* Világosszürke szín a közösségi ikonok fölé húzásakor a navigációban */
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.3); }
-    100% { transform: scale(1); }
+    0% { transform: scale(1); } /* Eredeti méret */
+    50% { transform: scale(1.3); } /* 1.3-szorosára nő */
+    100% { transform: scale(1); } /* Visszatér az eredeti méretre */
 }
 
 .social-icons a:hover i,
 footer a:hover i {
-    animation: pulse 0.6s ease-in-out;
-    filter: drop-shadow(0 0 6px white);
+    animation: pulse 0.6s ease-in-out; /* Pulzáló animáció 0.6 másodperc alatt, lassan indul és végződik */
+    filter: drop-shadow(0 0 6px white); /* Fehér árnyék a szöveg mögött a kiemeléshez */
 }
