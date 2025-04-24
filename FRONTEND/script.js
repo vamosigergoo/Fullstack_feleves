@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Configuration - set your bomb image URL here
+    
     const BOMB_IMAGE_URL = "https://images.pond5.com/glitch-bomb-icon-black-background-footage-170322450_iconl.jpeg";
     
-    // Elements
+    
     const jatekterTextArea = document.getElementById('jatekter');
     const lepesekInput = document.getElementById('lepesek');
     const ellenorzesGomb = document.getElementById('ellenorzesGomb');
@@ -13,18 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const ujraJatszokGomb = document.getElementById('ujraJatszokGomb');
     const bombaImage = document.querySelector('.bomba-image');
     
-    // Set bomb image URL
+    
     bombaImage.src = BOMB_IMAGE_URL;
 
-    // Hide bomb overlay when close button is clicked
+    //bomba bezárás
     closeBomba.addEventListener('click', () => {
         bombaOverlay.style.display = 'none';
     });
 
-    // Reset game when "Play Again" button is clicked
+    
     ujraJatszokGomb.addEventListener('click', () => {
         bombaOverlay.style.display = 'none';
-        // Reset the game to initial state
+        
         jatekterTextArea.value = `- - - - - - - -
 - - - - X - - -
 - - - - ¤ ¤ - -
@@ -60,22 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.json();
 
             if (response.ok) {
-                // Successful response
+                
                 if (data.hiba === 'bomba') {
-                    // Show bomb overlay
+                    
                     bombaOverlay.style.display = 'flex';
-                    // Still show the game state
+                    
                     megjelenitJatekTer(data.ujJatekTer);
                     coinSzamParagraph.textContent = `Felvett coin: ${data.felvettCoin} db (BOMBA!)`;
                 } else {
-                    // Normal successful move
+                    
                     bombaOverlay.style.display = 'none';
                     jatekterTablaDiv.innerHTML = '';
                     coinSzamParagraph.textContent = `Felvett coin: ${data.felvettCoin} db`;
                     megjelenitJatekTer(data.ujJatekTer);
                 }
             } else {
-                // Error response
+                
                 bombaOverlay.style.display = 'none';
                 alert(`Hiba történt: ${data.uzenet || 'Ismeretlen hiba'}`);
                 if (data.ujJatekTer) {

@@ -60,9 +60,9 @@ button:hover {
 }
 
 .reveal {
-    opacity: 0; /* Kezdetben teljesen átlátszó */
-    transform: translateX(100px); /* Kezdetben 100px-szel jobbra tolva */
-    transition: all 0.8s ease-in-out; /* Animáció minden tulajdonságra, 0.8s alatt, lassan indul és végződik */
+    opacity: 0; 
+    transform: translateX(100px); 
+    transition: all 0.8s ease-in-out; /* animáció végrehajtás */
 }
 
 .reveal.active {
@@ -70,33 +70,33 @@ button:hover {
     transform: translateX(0); /* Visszatér az eredeti pozícióba */
 }
 footer {
-    background-color: #111; /* Sötétszürke háttérszín a láblécnek */
-    color: #fff; /* Fehér szövegszín a láblécben */
-    padding: 1rem; /* Belső margó a lábléc körül */
-    text-align: center; /* Szöveg középre igazítása a láblécben */
+    background-color: #111; 
+    color: #fff; 
+    padding: 1rem; 
+    text-align: center; 
 }
 
 footer a {
-    color: #fff; /* Fehér szín a lábléc linkjeihez */
-    transition: color 0.3s; /* Színváltozás animációja 0.3 másodperc alatt */
+    color: #fff; 
+    transition: color 0.3s; 
 }
 
 footer a:hover {
-    color: #ccc; /* Világosszürke szín a lábléc linkjei fölé húzásakor */
+    color: #ccc; 
 }
 
 nav .social-icons a:hover {
-    color: #ccc; /* Világosszürke szín a közösségi ikonok fölé húzásakor a navigációban */
+    color: #ccc; 
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); } /* Eredeti méret */
-    50% { transform: scale(1.3); } /* 1.3-szorosára nő */
-    100% { transform: scale(1); } /* Visszatér az eredeti méretre */
+    0% { transform: scale(1); } 
+    50% { transform: scale(1.3); } 
+    100% { transform: scale(1); } 
 }
 
 .social-icons a:hover i,
 footer a:hover i {
-    animation: pulse 0.6s ease-in-out; /* Pulzáló animáció 0.6 másodperc alatt, lassan indul és végződik */
-    filter: drop-shadow(0 0 6px white); /* Fehér árnyék a szöveg mögött a kiemeléshez */
+    animation: pulse 0.6s ease-in-out; 
+    filter: drop-shadow(0 0 6px white); 
 }
